@@ -29,3 +29,19 @@ reportgenerator -reports:"PrimeService.Tests\TestResults\{guid}\coverage.cobertu
 `coveragereport`フォルダにレポートが生成されるので、そのフォルダの`index.html`をブラウザで開くと下図のように表示される。
 
 ![Coverage Report Sample](media/coverage-report-sample.png)
+
+## APIドキュメント
+
+APIに記載したいコメントを使ってドキュメントを生成し、ブラウザでプレビューするなら以下。
+
+```sh
+docfx docfx_project/docfx.json --serve
+```
+
+どこかにデプロイするためにビルドするなら以下。
+
+```sh
+docfx build docfx_project/docfx.json
+```
+
+フォルダ`docfx_project\_site`に静的なサイトが生成されるので、好きな場所にコピーして使う。
